@@ -32,10 +32,10 @@ const Hero: React.FC<HeroProps> = ({ content, onCtaClick }) => {
       {/* Floating Elements & Decoratives */}
       <div className="absolute inset-0 hidden lg:block z-10 pointer-events-none">
         {/* The floating images */}
-        {content.heroImageFloating2 && <img src={content.heroImageFloating2} alt="Showcase" className="absolute top-[12%] left-[2%] w-[20%] rounded-lg shadow-2xl transform -rotate-6 transition-transform duration-500 hover:scale-105 hover:-rotate-3 animate-float" />}
-        {content.heroImageFloating1 && <img src={content.heroImageFloating1} alt="Showcase" className="absolute top-[8%] right-[2%] w-[26%] rounded-lg shadow-2xl transform rotate-3 transition-transform duration-500 hover:scale-105 hover:rotate-1 animate-float" style={{ animationDelay: '1s' }}/>}
-        {content.heroImageMain && <img src={content.heroImageMain} alt="Showcase" className="absolute bottom-[25%] left-[5%] w-[23%] rounded-lg shadow-2xl transform rotate-4 transition-transform duration-500 hover:scale-105 hover:rotate-1 animate-float" style={{ animationDelay: '0.5s' }}/>}
-        {content.heroImageFloating3 && <img src={content.heroImageFloating3} alt="Showcase" className="absolute bottom-[18%] right-[4%] w-[24%] rounded-lg shadow-2xl transform -rotate-5 transition-transform duration-500 hover:scale-105 hover:rotate-2 animate-float" style={{ animationDelay: '1.5s' }}/>}
+        {content.heroImageFloating2 && <img src={content.heroImageFloating2} alt="Showcase" className="absolute top-[12%] left-[2%] w-[18%] rounded-lg shadow-2xl transform -rotate-6 transition-transform duration-500 hover:scale-105 hover:-rotate-3 animate-float" />}
+        {content.heroImageFloating1 && <img src={content.heroImageFloating1} alt="Showcase" className="absolute top-[8%] right-[2%] w-[22%] rounded-lg shadow-2xl transform rotate-3 transition-transform duration-500 hover:scale-105 hover:rotate-1 animate-float" style={{ animationDelay: '1s' }}/>}
+        {content.heroImageMain && <img src={content.heroImageMain} alt="Showcase" className="absolute bottom-[25%] left-[5%] w-[20%] rounded-lg shadow-2xl transform rotate-4 transition-transform duration-500 hover:scale-105 hover:rotate-1 animate-float" style={{ animationDelay: '0.5s' }}/>}
+        {content.heroImageFloating3 && <img src={content.heroImageFloating3} alt="Showcase" className="absolute bottom-[18%] right-[4%] w-[20%] rounded-lg shadow-2xl transform -rotate-5 transition-transform duration-500 hover:scale-105 hover:rotate-2 animate-float" style={{ animationDelay: '1.5s' }}/>}
         
         {/* Main Showcase Image - Updated for better visibility and positioning */}
         {content.heroImageShowcase && (
@@ -56,8 +56,8 @@ const Hero: React.FC<HeroProps> = ({ content, onCtaClick }) => {
       </div>
       
       {/* Main Content */}
-      <div className="relative container mx-auto px-4 sm:px-6 z-20 flex flex-col items-center justify-start min-h-[80vh] md:min-h-[90vh] pt-32 pb-20 md:pt-40 md:pb-24 text-center">
-        <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight lg:leading-snug max-w-3xl animate-fade-in-up text-[var(--color-text-primary)]" style={{ animationDelay: '200ms' }}>
+      <div className="relative container mx-auto px-4 sm:px-6 z-20 flex flex-col items-center justify-center min-h-[90vh] pt-24 pb-[35vh] text-center">
+        <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight lg:leading-snug max-w-3xl animate-fade-in-up text-[var(--color-text-primary)] drop-shadow-sm" style={{ animationDelay: '200ms' }}>
           {content.title}
         </h1>
         <p className="mt-6 text-base md:text-lg text-[var(--color-text-secondary)] max-w-2xl animate-fade-in-up" style={{ animationDelay: '400ms' }}>
@@ -68,7 +68,7 @@ const Hero: React.FC<HeroProps> = ({ content, onCtaClick }) => {
             {content.cta_primary}
           </button>
           {content.cta_secondary && content.cta_secondary.trim() !== '' && (
-            <a href="#contact" className="bg-transparent hover:bg-[var(--color-primary)]/10 text-[var(--color-primary)] font-bold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 border border-[var(--color-primary)]">
+            <a href="#contact" className="bg-white/80 hover:bg-white text-[var(--color-primary)] font-bold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 border-2 border-[var(--color-primary)] shadow-sm">
                {content.cta_secondary}
             </a>
           )}
